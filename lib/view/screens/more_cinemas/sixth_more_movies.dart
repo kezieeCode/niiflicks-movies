@@ -110,14 +110,14 @@ class _SixthMoreMoviesState extends State<SixthMoreMovies> {
                 child: TextField(
                   controller: _searchController,
                   decoration: InputDecoration(
-                      contentPadding: EdgeInsets.all(9),
+                      contentPadding: EdgeInsets.only(left: 100, top: 10),
                       suffixIcon: IconButton(
                         icon: Icon(Icons.search),
                         onPressed: () {
                           searchMovie();
                         },
                       ),
-                      hintText: 'Search..',
+                      hintText: 'Search',
                       border: InputBorder.none),
                 ),
               ),

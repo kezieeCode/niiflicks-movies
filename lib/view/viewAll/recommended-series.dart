@@ -108,30 +108,19 @@ class _RecommendedSeriesState extends State<RecommendedSeries> {
               child: TextField(
                 controller: _searchController,
                 decoration: InputDecoration(
-                    contentPadding: EdgeInsets.all(9),
+                    contentPadding: EdgeInsets.only(left: 100, top: 10),
                     suffixIcon: IconButton(
                       icon: Icon(Icons.search),
                       onPressed: () {
                         searchMovie();
                       },
                     ),
-                    hintText: 'Search any movie....',
+                    hintText: 'Search',
                     border: InputBorder.none),
               ),
             ),
           ),
           actions: [
-            Padding(
-              padding: const EdgeInsets.only(top: 20),
-              child: InkWell(
-                onTap: () => Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => FirstMoreMovies())),
-                child: Text(
-                  'Next',
-                  style: TextStyle(color: Colors.red),
-                ),
-              ),
-            ),
             IconButton(
                 onPressed: () {
                   Navigator.push(

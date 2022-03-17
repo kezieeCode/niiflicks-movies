@@ -99,27 +99,24 @@ class _FirstMoreMoviesState extends State<FirstMoreMovies> {
                 Icons.arrow_back_ios,
                 color: Colors.red,
               )),
-          title: Padding(
-            padding: const EdgeInsets.only(right: 60),
-            child: Container(
-              width: double.infinity,
-              height: 40,
-              decoration: BoxDecoration(
-                  color: Colors.white, borderRadius: BorderRadius.circular(30)),
-              child: Center(
-                child: TextField(
-                  controller: _searchController,
-                  decoration: InputDecoration(
-                      contentPadding: EdgeInsets.all(9),
-                      suffixIcon: IconButton(
-                        icon: Icon(Icons.search),
-                        onPressed: () {
-                          searchMovie();
-                        },
-                      ),
-                      hintText: 'Search..',
-                      border: InputBorder.none),
-                ),
+          title: Container(
+            width: double.infinity,
+            height: 40,
+            decoration: BoxDecoration(
+                color: Colors.white, borderRadius: BorderRadius.circular(30)),
+            child: Center(
+              child: TextField(
+                controller: _searchController,
+                decoration: InputDecoration(
+                    contentPadding: EdgeInsets.only(left: 100, top: 10),
+                    suffixIcon: IconButton(
+                      icon: Icon(Icons.search),
+                      onPressed: () {
+                        searchMovie();
+                      },
+                    ),
+                    hintText: 'Search',
+                    border: InputBorder.none),
               ),
             ),
           ),

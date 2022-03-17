@@ -109,9 +109,9 @@ class _PaystackState extends State<Paystack> {
                   gradient: LinearGradient(
                       begin: Alignment.bottomCenter,
                       end: Alignment.topCenter,
-                      colors: [Colors.red, Colors.redAccent]),
+                      colors: [Colors.black, Colors.black]),
                   border: Border(
-                    bottom: BorderSide(width: 2, color: Colors.blueAccent),
+                    bottom: BorderSide(width: 2, color: Colors.red),
                   )),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -127,20 +127,20 @@ class _PaystackState extends State<Paystack> {
                             },
                             icon: Icon(
                               Icons.arrow_back_ios,
-                              color: Colors.white,
+                              color: Colors.red,
                             )),
                         Spacer(
                           flex: 5,
                         ),
                         Container(
                             child: Text(
-                          'Make Payment',
+                          'Payment',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               fontWeight: FontWeight.w600,
                               fontSize: 22,
                               fontFamily: "lato",
-                              color: Colors.blue),
+                              color: Colors.red),
                         )),
                         Spacer(
                           flex: 7,
