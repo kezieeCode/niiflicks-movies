@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "140105213879",
+    "project_id": "niiflicks",
+    "storage_bucket": "niiflicks.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:140105213879:android:44ffbcbddaf4a0b1f12a32",
+        "android_client_info": {
+          "package_name": "com.ini.niiflicks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "140105213879-4cihetvb3g1o8e688kseugduehd6fug3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcV2d9npP60f97mL5SN7EOkk7kcFsF7Ys"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "140105213879-4cihetvb3g1o8e688kseugduehd6fug3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
