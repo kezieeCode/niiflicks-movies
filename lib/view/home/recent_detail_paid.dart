@@ -178,17 +178,17 @@ class _RecentDetailsScreenPaidState extends State<RecentDetailsScreenPaid> {
 
   Future getPricing() async {
     var _amount = "2";
-    var uri =
-        "https://v1.nocodeapi.com/niiflicks/cx/DstYqrfQqgHOHBcQ/rates/convert";
-    var data = {"amount": _amount, "from": "USD", "to": "NGN"};
+    var uri = "https://api.binance.com/api/v3/ticker/price?symbol=USDTNGN";
+    // var data = {"amount": _amount, "from": "USD", "to": "NGN"};
     var url = Uri.parse(uri);
-    final newUrl = url.replace(queryParameters: data);
-    var response =
-        await http.get(newUrl, headers: {"Content-Type": "application/json"});
+
+    var response = await http.get(
+      url,
+    );
     if (response.statusCode == 200) {
-      var newresponse = convert.jsonDecode(response.body)["result"];
+      var newresponse = convert.jsonDecode(response.body)["price"];
       final SharedPreferences prefs = await SharedPreferences.getInstance();
-      prefs.setDouble("money", newresponse);
+      prefs.setString("money", newresponse);
       var money = prefs.getDouble("money");
       // print(newresponse);
       print(money);
@@ -229,9 +229,10 @@ class _RecentDetailsScreenPaidState extends State<RecentDetailsScreenPaid> {
 
     // var payamount = _amount.trim() + "00";
     final SharedPreferences prefs = await SharedPreferences.getInstance();
-    var money = prefs.getDouble("money");
-    var payamount = money.toInt();
-    var originalAmount = payamount.toString().trim() + "00";
+    var money = prefs.getString("money");
+    var payamount = double.parse(money);
+    int paidamount = 2 * payamount.toInt();
+    var originalAmount = paidamount.toString().trim() + "00";
     print(money);
     await pay(_email, originalAmount).then((value) async {
       var result = jsonDecode(value.body);
