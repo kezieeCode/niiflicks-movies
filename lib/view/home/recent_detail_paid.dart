@@ -11,7 +11,7 @@ import 'package:niiflicks/view/home/paystack.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:flutter_paystack/flutter_paystack.dart';
-import 'package:loader_overlay/loader_overlay.dart';
+
 import 'package:http/http.dart';
 
 import 'package:niiflicks/classes/latest.dart';

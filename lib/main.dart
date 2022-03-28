@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:isolate';
 import 'dart:ui';
-import 'package:flutter_downloader/flutter_downloader.dart';
+
 import 'package:http/http.dart' as http;
 import 'package:flutter/services.dart';
 import 'package:niiflicks/classes/live_tv.dart';
@@ -24,7 +24,7 @@ const simplePeriodicTask = 'Movie at your finger tips';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // Firebase.initializeApp();
-  await FlutterDownloader.initialize(debug: false);
+
   // await Workmanager().initialize(callbackDispatcher, isInDebugMode: false);
   await Workmanager().initialize(callbackDispatcher,
       isInDebugMode:
@@ -190,43 +190,13 @@ class _MyAppState extends State<MyApp> {
     // s
     callbackDispatcher();
     // initialize();
-    userInfo();
+
     // instantNotifications();
     // _checkUpdate();
     // scheduledNotifications();
-
-    IsolateNameServer.registerPortWithName(
-        _port.sendPort, 'downloader_send_port');
-    _port.listen((dynamic data) {
-      String id = data[0];
-      DownloadTaskStatus status = data[1];
-      int progress = data[2];
-      setState(() {});
-    });
-
-    FlutterDownloader.registerCallback(downloadCallback);
   }
 
   @override
-  void dispose() {
-    IsolateNameServer.removePortNameMapping('downloader_send_port');
-    super.dispose();
-  }
-
-  static void downloadCallback(
-      String id, DownloadTaskStatus status, int progress) {
-    final SendPort send =
-        IsolateNameServer.lookupPortByName('downloader_send_port');
-    send.send([id, status, progress]);
-  }
-
-  userInfo() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    setState(() {
-      displayUser = prefs.getString('displayUser');
-    });
-  }
-
   Widget getView() {
     return MultiProvider(
         providers: [

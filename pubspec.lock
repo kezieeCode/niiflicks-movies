@@ -15,13 +15,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.2"
-  archive:
-    dependency: transitive
-    description:
-      name: archive
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "3.2.1"
   async:
     dependency: transitive
     description:
@@ -57,13 +50,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.2"
-  back_button_interceptor:
-    dependency: transitive
-    description:
-      name: back_button_interceptor
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "5.0.2"
   boolean_selector:
     dependency: transitive
     description:
@@ -141,13 +127,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.15.0"
-  cool_alert:
-    dependency: "direct main"
-    description:
-      name: cool_alert
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.1.0"
   credit_card:
     dependency: "direct main"
     description:
@@ -244,13 +223,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.3.0"
-  flutter_downloader:
-    dependency: "direct main"
-    description:
-      name: flutter_downloader
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.7.2"
   flutter_inappwebview:
     dependency: transitive
     description:
@@ -279,13 +251,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.0.1"
-  flutter_mobx:
-    dependency: "direct main"
-    description:
-      name: flutter_mobx
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.1.0+2"
   flutter_paystack:
     dependency: "direct main"
     description:
@@ -485,20 +450,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.4.0"
-  loader_overlay:
-    dependency: "direct main"
-    description:
-      name: loader_overlay
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.0.5+1"
-  lottie:
-    dependency: transitive
-    description:
-      name: lottie
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.2.2"
   matcher:
     dependency: transitive
     description:
@@ -527,13 +478,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.1"
-  mobx:
-    dependency: transitive
-    description:
-      name: mobx
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.2.1+4"
   modal_progress_hud:
     dependency: "direct main"
     description:

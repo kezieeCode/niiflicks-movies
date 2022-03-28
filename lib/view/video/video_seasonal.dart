@@ -5,7 +5,7 @@ import 'dart:isolate';
 import 'dart:ui';
 import 'package:dio/dio.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_downloader/flutter_downloader.dart';
+// import 'package:flutter_downloader/flutter_downloader.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:image_gallery_saver/image_gallery_saver.dart';
@@ -95,16 +95,16 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreens> {
     await _createFolder();
     final folderName = "Niiflicks";
     final dir = Directory("storage/emulated/0/$folderName");
-    final taskId = await FlutterDownloader.enqueue(
-      // saveInPublicStorage: true,
-      fileName: "${widget.title}.mp4",
-      url: url,
-      savedDir: dir.path,
-      showNotification:
-          true, // show download progress in status bar (for Android)
-      openFileFromNotification:
-          true, // click on notification to open downloaded file (for Android)
-    );
+    // final taskId = await FlutterDownloader.enqueue(
+    //   // saveInPublicStorage: true,
+    //   fileName: "${widget.title}.mp4",
+    //   url: url,
+    //   savedDir: dir.path,
+    //   showNotification:
+    //       true, // show download progress in status bar (for Android)
+    //   openFileFromNotification:
+    //       true, // click on notification to open downloaded file (for Android)
+    // );
 
     String ext = widget.trailer.substring(widget.trailer.lastIndexOf('.'));
 
